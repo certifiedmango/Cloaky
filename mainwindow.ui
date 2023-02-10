@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>440</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>440</width>
+    <height>360</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>440</width>
+    <height>360</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #f6f7fa;
+}
+
+QMenuBar {
+    background-color: #e7e8eb;
+    color: #202020;
+    font-size: 16px;
+}
+
+QMenuBar::item {
+    background-color: transparent;
+    padding: 6px;
+}
+
+QMenuBar::item:selected {
+    background-color: #c6c7cc;
+}
+
+QStatusBar {
+    background-color: #e7e8eb;
+    color: #202020;
+    font-size: 16px;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>421</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="10" column="0" colspan="3">
+      <widget class="QLineEdit" name="vpn_file_path">
+       <property name="toolTip">
+        <string>Path for the OpenVPN file, use the button above to select the file</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #f6f7fa;
+    border-radius: 10px;
+    border: 1px solid #888a85;
+    font-size: 16px;
+    padding: 6px;
+}
+
+QLineEdit:focus {
+    background-color: #fff;
+    border: 2px solid #3498db;
+}</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0" colspan="3">
+      <widget class="QLineEdit" name="path">
+       <property name="toolTip">
+        <string>Path for json config file, use the button above to select the file</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #f6f7fa;
+    border-radius: 10px;
+    border: 1px solid #888a85;
+    font-size: 16px;
+    padding: 6px;
+}
+
+QLineEdit:focus {
+    background-color: #fff;
+    border: 2px solid #3498db;
+}</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="11" column="0">
+      <widget class="QLabel" name="stat">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #202020;
+    font-size: 16px;
+}
+
+QLabel[bold=&quot;true&quot;] {
+    font-weight: bold;
+}
+
+QLabel[italic=&quot;true&quot;] {
+    font-style: italic;
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QComboBox" name="comboBox">
+       <property name="toolTip">
+        <string>the connection protocol set on cloak server</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QComboBox {
+    background-color: #f6f7fa;
+    border-radius: 10px;
+    border: 1px solid #888a85;
+    font-size: 16px;
+    padding: 6px;
+}
+
+QComboBox:hover, QComboBox:focus {
+    background-color: #e7e8eb;
+    border: 2px solid #3498db;
+}
+
+QComboBox::drop-down {
+    width: 20px;
+    border-left: 1px solid #888a85;
+}
+
+QComboBox::down-arrow {
+    image: url(down-arrow-icon.png);
+}
+</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>UDP</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>TCP</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #202020;
+    font-size: 16px;
+}
+
+QLabel[bold=&quot;true&quot;] {
+    font-weight: bold;
+}
+
+QLabel[italic=&quot;true&quot;] {
+    font-style: italic;
+}</string>
+       </property>
+       <property name="text">
+        <string>Host:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0" colspan="3">
+      <widget class="QPushButton" name="browse">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
+    border-radius: 10px;
+    border: 1px solid #888a85;
+    color: #202020;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 6px;
+    text-align: center;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #e7e8eb, stop: 1 #c6c7cc);
+    border: 1px solid #5f5f5f;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #d9dadc, stop: 1 #f6f7fa);
+    border: 1px solid #000;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Browse for config file</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="0" colspan="3">
+      <widget class="QPushButton" name="browse_vpn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
+    border-radius: 10px;
+    border: 1px solid #888a85;
+    color: #202020;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 6px;
+    text-align: center;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #e7e8eb, stop: 1 #c6c7cc);
+    border: 1px solid #5f5f5f;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #d9dadc, stop: 1 #f6f7fa);
+    border: 1px solid #000;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Browse for OpenVPN file</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="2">
+      <widget class="QLineEdit" name="host">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Enter the Host address or IP here&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLineEdit {
+    background-color: #f6f7fa;
+    border-radius: 10px;
+    border: 1px solid #888a85;
+    font-size: 16px;
+    padding: 6px;
+}
+
+QLineEdit:focus {
+    background-color: #fff;
+    border: 2px solid #3498db;
+}</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0" colspan="3">
+      <widget class="QPushButton" name="connect">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #f6f7fa, stop: 1 #dadbde);
+    border-radius: 10px;
+    border: 1px solid #888a85;
+    color: #202020;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 6px;
+    text-align: center;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #e7e8eb, stop: 1 #c6c7cc);
+    border: 1px solid #5f5f5f;
+}
+
+QPushButton:pressed {
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 #d9dadc, stop: 1 #f6f7fa);
+    border: 1px solid #000;
+}
+</string>
+       </property>
+       <property name="text">
+        <string>Connect</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1" colspan="2">
+      <widget class="QComboBox" name="enc_comboBox">
+       <property name="toolTip">
+        <string>The encryption between the client and cloak server, it is different than the VPN encryption, the default value is based on the json config file</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QComboBox {
+    background-color: #f6f7fa;
+    border-radius: 10px;
+    border: 1px solid #888a85;
+    font-size: 16px;
+    padding: 6px;
+}
+
+QComboBox:hover, QComboBox:focus {
+    background-color: #e7e8eb;
+    border: 2px solid #3498db;
+}
+
+QComboBox::drop-down {
+    width: 20px;
+    border-left: 1px solid #888a85;
+}
+
+QComboBox::down-arrow {
+    image: url(down-arrow-icon.png);
+}
+</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Defualt</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>plain</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>aes-128-gcm</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>aes-256-gcm</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>chacha20-poly1305</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="toolTip">
+        <string/>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #202020;
+    font-size: 16px;
+}
+
+QLabel[bold=&quot;true&quot;] {
+    font-weight: bold;
+}
+
+QLabel[italic=&quot;true&quot;] {
+    font-style: italic;
+}</string>
+       </property>
+       <property name="text">
+        <string>Cloak Encryption:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
