@@ -17,3 +17,10 @@ Load the two required files (config.json and the OpenVPN file) into the Cloaky i
 Run Cloaky and click the button to set everything up based on the information in the config.json file.
 Usage
 Cloaky requires the two files mentioned above to work. The config.json file contains information about the cloak server, while the OpenVPN file provides the information needed to connect to the server. With these two files in place, Cloaky can be used to quickly and easily set up a connection to the cloak server with just one click.
+
+
+## Download
+
+The compiled version of Cloaky is available for download on Github. You can download it by clicking on the following link:
+
+[Download Cloaky](https://github.com/certifiedmango/Cloaky/releases)
