@@ -24,3 +24,11 @@ Cloaky requires the two files mentioned above to work. The config.json file cont
 The compiled version of Cloaky is available for download on Github. You can download it by clicking on the following link:
 
 [Download Cloaky](https://github.com/certifiedmango/Cloaky/releases)
+
+This project makes use of the following open-source projects:
+
+- Cloak: https://github.com/cbeuw/Cloak
+- OpenVPN: https://github.com/OpenVPN/openvpn-gui
+
+We would like to extend our gratitude to the developers and contributors of these projects.
+
